@@ -1,0 +1,14 @@
+.app {
+    display: flex;
+    overflow: hidden;
+}
+
+.navBar {
+    flex: 0.2;
+    background-color: rgb(0, 21, 41);;
+}
+
+.main {
+    flex: 0.8;
+    width: 100%;
+}
