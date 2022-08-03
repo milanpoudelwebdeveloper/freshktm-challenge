@@ -1,0 +1,37 @@
+.navContainer {
+    height: 100vh;
+}
+
+.logoContainer {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+
+.logoContainer>p {
+    font-size: 18px;
+    color: #1890FF
+}
+
+.menuItems>ul {
+    color: white;
+    list-style: none;
+}
+
+.menuItem {
+    display: flex;
+    color: lightcyan;
+    font-size: 14px;
+    padding: 5px 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.menuItem-active {
+   background-color: #1890FF;
+}
