@@ -4,7 +4,7 @@ import TopSection from "./TopSection/TopSection";
 
 const HomePage = () => {
   return (
-    <div style={{ padding: "10px 20px" }}>
+    <div style={{ padding: "10px 30px", backgroundColor: "#F0F2F5" }}>
       <TopSection />
       <CryptoCurrencies />
     </div>

@@ -1,0 +1,34 @@
+.cryptoDetail {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F2F5;
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.cryptoTitle {
+    border-bottom: 1px solid gray;
+    width: 100%;
+    text-align: center;  
+    color:#0071bd;
+
+}
+
+.priceDetails {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.priceDetails>h2 {
+    color:#0071bd
+}
+
+.currentDetail {
+    display: flex;
+    gap:1rem;
+}
+
+.cryptoDetail> p {
+    color: gray;
+}

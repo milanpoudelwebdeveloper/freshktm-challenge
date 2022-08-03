@@ -1,0 +1,23 @@
+
+.cryptoItem {
+   width: 22%;
+   margin-bottom: 1.5rem;
+   background-color: white;
+   padding: 5px 0px;
+   cursor: pointer;
+}
+.cryptoItem:hover {
+    box-shadow: 1px 3px 5px gray;;
+}
+.cryptoName {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: 5px 20px;
+    align-items: center;
+}
+
+.cryptoDetails {
+    font-size: 14px;
+    padding: 10px 20px;
+}
