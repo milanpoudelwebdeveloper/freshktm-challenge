@@ -1,6 +1,5 @@
 .navContainer {
     height: 100vh;
-    position: relative;
 }
 
 
@@ -64,11 +63,12 @@
     }
 
     .menuItems{
-        position: absolute;
+        position: fixed;
         top: 3rem;
         width: 50%;
         right: 5px;
         background-color: black;
+        z-index: 100;
 
     }
 }

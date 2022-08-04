@@ -18,6 +18,10 @@ const SideNavBar = () => {
     }
   }, [windowSize]);
 
+  const closeSideMenu = () => {
+    setActiveMenu(false);
+  };
+
   return (
     <div className="navContainer">
       <div className="logoContainer">
@@ -32,7 +36,7 @@ const SideNavBar = () => {
       </div>
       {activeMenu && (
         <div>
-          <NavBarMenus />
+          <NavBarMenus closeSideMenu={closeSideMenu} />
         </div>
       )}
     </div>
