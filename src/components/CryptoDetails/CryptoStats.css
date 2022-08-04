@@ -1,0 +1,18 @@
+.cryptoStats {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.mainStats> h1, .otherStats>h1 {
+    color: #0071bd;
+    font-size: 20px;
+}
+.stats {
+    padding: 10px 2px;
+    border-bottom: 1px solid gainsboro;
+}
+.stats:hover {
+    background-color:  white;
+
+}
