@@ -1,12 +1,14 @@
 import React from "react";
 import CryptoCurrencies from "../CryptoCurrencies/CryptoCurrencies";
+import Footer from "../Footer/Footer";
 import TopSection from "./TopSection/TopSection";
 
 const HomePage = () => {
   return (
-    <div style={{ padding: "10px 30px", backgroundColor: "#F0F2F5" }}>
+    <div>
       <TopSection />
       <CryptoCurrencies />
+      <Footer />
     </div>
   );
 };

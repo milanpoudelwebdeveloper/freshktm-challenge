@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import "./CryptoCurrencies.css";
+import "../CryptoCurrencies/CryptoCurrencies.css";
 import axios from "axios";
-import Card from "./Card";
-import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import Card from "../CryptoCurrencies/Card";
+import SearchContainer from "./SearchContainer";
 import LoadingSkeleton from "../LoadingSkeleton/LoadingSkeleton";
 
-const CryptoCurrencies = () => {
+const AllCryptoCurrencies = () => {
   const [cryptoCurrencies, setCryptoCurrencies] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [searchKeyword, setSearchKeyword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const getCryptoCurrencies = async () => {
     setLoading(true);
@@ -27,16 +28,19 @@ const CryptoCurrencies = () => {
     getCryptoCurrencies();
   }, []);
 
+  const filteredCurrencies = cryptoCurrencies.filter((item) =>
+    item.name.toLowerCase().includes(searchKeyword.toLowerCase())
+  );
+
   return (
     <div className="cryptoContainer">
-      <h1>Top 50 cryptocurrencies in the world</h1>
+      <SearchContainer keyword={searchKeyword} setKeyword={setSearchKeyword} />
       <div className="cryptoItems">
         {loading && <LoadingSkeleton />}
-        {!loading &&
-          cryptoCurrencies?.slice(0, 50).map((item) => <Card item={item} />)}
+        {!loading && filteredCurrencies?.map((item) => <Card item={item} />)}
       </div>
     </div>
   );
 };
 
-export default CryptoCurrencies;
+export default AllCryptoCurrencies;

@@ -1,6 +1,7 @@
 .app {
     display: flex;
     overflow: hidden;
+    background-color:  #F0F2F5;
 }
 
 .navBar {
@@ -11,4 +12,5 @@
 .main {
     flex: 0.8;
     width: 100%;
+    padding: 2rem;
 }

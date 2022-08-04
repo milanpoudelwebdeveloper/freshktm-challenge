@@ -4,6 +4,8 @@ import axios from "axios";
 import LineChart from "../LineChart/LineChart";
 import "./CryptoDetails.css";
 import millify from "millify";
+import CryptoStats from "./CryptoStats";
+import Footer from "../Footer/Footer";
 
 const CryptoDetail = () => {
   const [cryptoDetails, setCryptoDetails] = useState([]);
@@ -17,6 +19,7 @@ const CryptoDetail = () => {
         data: { data },
       } = await axios.get("https://api.coincap.io/v2/assets/" + id);
       setCryptoDetails(data);
+      console.log(data);
     } catch (e) {
       console.log(e);
     }
@@ -57,6 +60,8 @@ const CryptoDetail = () => {
         </div>
       </div>
       <LineChart cryptoDetails={cryptoHistory && cryptoHistory} />
+      <CryptoStats cryptoDetails={cryptoDetails} />
+      <Footer />
     </div>
   );
 };
