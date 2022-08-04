@@ -32,7 +32,7 @@ const TopCurrencies = () => {
   return (
     <div className="cryptoContainer">
       <div className="titleContainer">
-        <h2>Top 50 cryptocurrencies in the world :</h2>
+        <h2>Top 50 cryptocurrencies :</h2>
         <button
           className="showBtn"
           onClick={() => navigate("/cryptocurrencies")}
