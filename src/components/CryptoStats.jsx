@@ -1,5 +1,5 @@
 import React from "react";
-import "./CryptoStats.css";
+import "../styles/CryptoStats.css";
 import millify from "millify";
 
 const CryptoStats = ({
@@ -31,7 +31,7 @@ const CryptoStats = ({
     <div className="cryptoStats">
       <div className="mainStats">
         <h1>{name} Value Statistics</h1>
-        <p>Overview of {name} in Market</p>
+        <p>Overview of {name} </p>
         {mainStats.map((stat) => (
           <>
             {Object.entries(stat).map(([k, v]) => (
@@ -44,7 +44,7 @@ const CryptoStats = ({
       </div>
       <div className="otherStats">
         <h1>Other important statistics</h1>
-        <p>Other important stats of Bitcoin</p>
+        <p>Other important stats</p>
         {otherStats.map((stat) => (
           <>
             {Object.entries(stat).map(([k, v]) => (

@@ -2,7 +2,14 @@ import React from "react";
 
 const SearchContainer = ({ keyword, setKeyword }) => {
   return (
-    <div style={{ width: "100%", textAlign: "center", marginBottom: "20px" }}>
+    <div
+      style={{
+        width: "100%",
+        textAlign: "center",
+        marginBottom: "25px",
+        marginTop: "1rem",
+      }}
+    >
       <input
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}

@@ -12,5 +12,16 @@
 .main {
     flex: 0.8;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem 2rem;
+
+}
+
+@media screen and (max-width: 800px) {
+    .app {
+        flex-direction: column;
+    }
+    .main {
+        padding :1rem;
+    }
+    
 }

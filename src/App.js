@@ -1,11 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import SideNavBar from "./components/SideNavbar/SideNavBar";
+
 import "./App.css";
-import HomePage from "./components/HomePage/HomePage";
-import About from "./components/About/About";
-import CryptoDetail from "./components/CryptoDetails/CryptoDetail";
-import AllCryptoCurrencies from "./components/AllCryptoCurrencies/AllCryptoCurrencies";
+import HomePage from "./pages/HomePage";
+import About from "./pages/About";
+
+import CryptoCurrencies from "./pages/CryptoCurrencies";
+import CryptoDetail from "./pages/CryptoDetails";
+import SideNavBar from "./components/SideNavBar/SideNavBar";
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
       <div className="main">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/cryptoCurrencies" element={<AllCryptoCurrencies />} />
+          <Route path="/cryptoCurrencies" element={<CryptoCurrencies />} />
           <Route path="/about" element={<About />} />
           <Route path="/cryptoCurrency/:id" element={<CryptoDetail />} />
         </Routes>

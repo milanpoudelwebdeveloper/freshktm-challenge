@@ -1,0 +1,74 @@
+.navContainer {
+    height: 100vh;
+    position: relative;
+}
+
+
+@media screen and (max-width:800px) {
+    .navContainer {
+        height: 8vh;
+    }
+    
+}
+
+.logoContainer {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 1rem;
+    position: relative;
+
+}
+
+.hamburger {
+    position: absolute;
+    right: 14px;
+    display: none;
+}
+
+
+.logoContainer>p {
+    font-size: 18px;
+    color: #1890FF
+}
+
+
+
+.menuItem {
+    display: flex;
+    color: lightcyan;
+    font-size: 14px;
+    padding: 18px 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.menuItem-active {
+   background-color: #1890FF;
+}
+
+@media screen and (max-width: 768px) {
+    .logoContainer {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        background-color: black;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menuItems{
+        position: absolute;
+        top: 3rem;
+        width: 50%;
+        right: 5px;
+        background-color: black;
+
+    }
+}
