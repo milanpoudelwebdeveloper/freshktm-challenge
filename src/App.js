@@ -7,7 +7,7 @@ import About from "./pages/About";
 
 import CryptoCurrencies from "./pages/CryptoCurrencies";
 import CryptoDetail from "./pages/CryptoDetails";
-import SideNavBar from "./components/SideNavBar/SideNavBar";
+import SideNavBar from "../src/components/SideNavBar/SideNavBar";
 
 function App() {
   return (
