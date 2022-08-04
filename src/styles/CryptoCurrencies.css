@@ -33,6 +33,11 @@
     .cryptoItems {
         gap:4%;
     }
-    
+    .titleContainer>h2 {
+        font-size: 16px;
+    }
+    .showBtn {
+        font-size: 12px;
+    }
 }
 
