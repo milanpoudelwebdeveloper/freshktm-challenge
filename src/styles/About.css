@@ -15,4 +15,14 @@
   }
 
 
+  @media screen and (max-width: 768px) {
+    .about>img {
+      height: 150px;
+    }
+    .about>p {
+      font-size: 12px;
+    }
+    
+  }
+
  
