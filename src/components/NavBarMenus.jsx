@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { sideNavBarItems } from "../../constants/sideNavbarItems";
+import { sideNavBarItems } from "../constants/sideNavbarItems";
 
 const NavBarMenus = () => {
   const { pathname } = useLocation();

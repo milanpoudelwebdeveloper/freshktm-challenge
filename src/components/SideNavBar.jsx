@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/SideNavBar.css";
+import "../styles/SideNavBar.css";
 import { ImStatsDots } from "react-icons/im";
 import NavBarMenus from "./NavBarMenus";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 const SideNavBar = () => {
   const [activeMenu, setActiveMenu] = useState(false);
