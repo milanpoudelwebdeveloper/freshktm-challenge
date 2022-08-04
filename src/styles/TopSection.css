@@ -1,0 +1,23 @@
+.topSection > h2 {
+  font-size: 25px;
+  color: rgba(0,0,0,.85);
+}
+
+.topSection>p {
+  font-size: 18px;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 800px) {
+  .topSection {
+    padding: 0px 2px;
+  }
+
+  .topSection>h2 {
+    font-size: 16px;
+  }
+  .topSection>p {
+    font-size: 12px;
+    
+  }
+}

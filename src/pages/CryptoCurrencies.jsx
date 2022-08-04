@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "../CryptoCurrencies/CryptoCurrencies.css";
+import "../styles/CryptoCurrencies.css";
 import axios from "axios";
-import Card from "../CryptoCurrencies/Card";
-import SearchContainer from "./SearchContainer";
-import LoadingSkeleton from "../LoadingSkeleton/LoadingSkeleton";
+import Card from "../components/Common/Card/Card";
+import SearchContainer from "../components/SearchContainer";
+import LoadingSkeleton from "../components/Common/LoadingSkeleton/LoadingSkeleton";
+import Footer from "../components/Footer";
 
 const AllCryptoCurrencies = () => {
   const [cryptoCurrencies, setCryptoCurrencies] = useState([]);
@@ -39,6 +40,7 @@ const AllCryptoCurrencies = () => {
         {loading && <LoadingSkeleton />}
         {!loading && filteredCurrencies?.map((item) => <Card item={item} />)}
       </div>
+      <Footer />
     </div>
   );
 };

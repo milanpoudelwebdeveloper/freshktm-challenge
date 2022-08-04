@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import "./CryptoCurrencies.css";
+import "../styles/CryptoCurrencies.css";
 import axios from "axios";
-import Card from "./Card";
-import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
-import LoadingSkeleton from "../LoadingSkeleton/LoadingSkeleton";
+import Card from "./Common/Card/Card";
+import LoadingSkeleton from "./Common/LoadingSkeleton/LoadingSkeleton";
+import { useNavigate } from "react-router-dom";
 
-const CryptoCurrencies = () => {
+const TopCurrencies = () => {
   const [cryptoCurrencies, setCryptoCurrencies] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   const getCryptoCurrencies = async () => {
     setLoading(true);
@@ -29,7 +31,15 @@ const CryptoCurrencies = () => {
 
   return (
     <div className="cryptoContainer">
-      <h1>Top 50 cryptocurrencies in the world</h1>
+      <div className="titleContainer">
+        <h2>Top 50 cryptocurrencies in the world :</h2>
+        <button
+          className="showBtn"
+          onClick={() => navigate("/cryptocurrencies")}
+        >
+          Show more
+        </button>
+      </div>
       <div className="cryptoItems">
         {loading && <LoadingSkeleton />}
         {!loading &&
@@ -39,4 +49,4 @@ const CryptoCurrencies = () => {
   );
 };
 
-export default CryptoCurrencies;
+export default TopCurrencies;

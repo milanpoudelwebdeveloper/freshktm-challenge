@@ -1,22 +1,16 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
+import { getTimeAndPrice } from "../utils/getTimeAndPrice";
 
 const LineChart = ({ cryptoDetails }) => {
-  const timeLine = [];
-  const prices = [];
-
-  cryptoDetails?.forEach(({ priceUsd, time }) => {
-    prices.push(priceUsd);
-    timeLine.push(new Date(time).toLocaleDateString());
-  });
-
+  const { timeLine, prices } = getTimeAndPrice(cryptoDetails);
   const data = {
-    labels: timeLine,
+    labels: timeLine.slice(0, 20),
     datasets: [
       {
         label: "Price in USD",
-        data: prices,
+        data: prices.slice(0, 20),
         fill: false,
         backgroundColor: "#0071bd",
         borderColor: "#0071bd",

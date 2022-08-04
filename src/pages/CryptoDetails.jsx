@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import LineChart from "../LineChart/LineChart";
-import "./CryptoDetails.css";
+import LineChart from "../components/LineChart";
+import "../styles/CryptoDetails.css";
 import millify from "millify";
-import CryptoStats from "./CryptoStats";
-import Footer from "../Footer/Footer";
+import CryptoStats from "../components/CryptoStats";
+import Footer from "../components/Footer";
+import BarChart from "../components/BarChart";
 
 const CryptoDetail = () => {
   const [cryptoDetails, setCryptoDetails] = useState([]);
@@ -60,6 +61,7 @@ const CryptoDetail = () => {
         </div>
       </div>
       <LineChart cryptoDetails={cryptoHistory && cryptoHistory} />
+      <BarChart cryptoDetails={cryptoHistory && cryptoHistory} />
       <CryptoStats cryptoDetails={cryptoDetails} />
       <Footer />
     </div>
