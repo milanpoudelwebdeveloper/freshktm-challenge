@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { sideNavBarItems } from "../../constants/sideNavbarItems";
+import { sideNavBarItems } from "../constants/sideNavbarItems";
 
-const NavBarMenus = ({ closeSideMenu }) => {
+const NavBarMenus = () => {
   const { pathname } = useLocation();
   const [activeMenu, setActiveMenu] = useState("");
 
@@ -17,7 +17,6 @@ const NavBarMenus = ({ closeSideMenu }) => {
             className={
               activeMenu === href ? "menuItem menuItem-active" : "menuItem"
             }
-            onClick={closeSideMenu}
           >
             <div>{icon}</div>
             <p>{title}</p>
