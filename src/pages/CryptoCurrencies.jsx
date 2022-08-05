@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/CryptoCurrencies.css'
-import axios from 'axios'
 import Card from '../components/Common/Card/Card'
 import SearchContainer from '../components/SearchContainer'
 import LoadingSkeleton from '../components/Common/LoadingSkeleton/LoadingSkeleton'
 import Footer from '../components/Footer'
+import { get } from '../services/http'
 
 const AllCryptoCurrencies = () => {
   const [cryptoCurrencies, setCryptoCurrencies] = useState([])
@@ -14,9 +14,7 @@ const AllCryptoCurrencies = () => {
   const getCryptoCurrencies = async () => {
     setLoading(true)
     try {
-      const {
-        data: { data },
-      } = await axios.get('https://api.coincap.io/v2/assets')
+      const { data } = await get('/assets')
       setCryptoCurrencies(data)
       setLoading(false)
     } catch (e) {
@@ -29,6 +27,7 @@ const AllCryptoCurrencies = () => {
     getCryptoCurrencies()
   }, [])
 
+  //filteredCurrencies returns the arrays of cryptoCurrencies that match the searchKeyword
   const filteredCurrencies = cryptoCurrencies.filter((item) =>
     item.name.toLowerCase().includes(searchKeyword.toLowerCase())
   )

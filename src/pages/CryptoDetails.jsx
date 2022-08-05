@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
 import LineChart from '../components/LineChart'
 import '../styles/CryptoDetails.css'
 import millify from 'millify'
 import CryptoStats from '../components/CryptoStats'
 import Footer from '../components/Footer'
 import BarChart from '../components/BarChart'
+import { get } from '../services/http'
 
 const CryptoDetail = () => {
   const [cryptoDetails, setCryptoDetails] = useState([])
   const [cryptoHistory, setCryptoHistory] = useState([])
 
+  //extracting id from the url params, with this, we are sending the api request
   let { id } = useParams()
 
   const getCryptoDetails = async () => {
     try {
-      const {
-        data: { data },
-      } = await axios.get('https://api.coincap.io/v2/assets/' + id)
+      const { data } = await get('assets/' + id)
       setCryptoDetails(data)
       console.log(data)
     } catch (e) {
@@ -28,11 +27,7 @@ const CryptoDetail = () => {
 
   const getCryptoHistory = async () => {
     try {
-      const {
-        data: { data },
-      } = await axios.get(
-        `https://api.coincap.io/v2/assets/${id}/history?interval=d1`
-      )
+      const { data } = await get(`/assets/${id}/history?interval=d1`)
       setCryptoHistory(data)
     } catch (e) {
       console.log(e)

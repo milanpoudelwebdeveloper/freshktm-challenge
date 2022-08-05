@@ -12,6 +12,7 @@ const SideNavBar = () => {
     typeOfDevice: { isMobile },
   } = useWindowSize()
 
+  //we want to hide the sidemenu in mobile view until the user clicks on the hamburger menu icon
   useEffect(() => {
     if (isMobile) {
       setActiveMenu(false)
@@ -32,6 +33,7 @@ const SideNavBar = () => {
 
         <div className="hamburger">
           <GiHamburgerMenu
+            //this opens and clicks the sideMenu according to the previous state
             onClick={() => setActiveMenu((prevState) => !prevState)}
           />
         </div>

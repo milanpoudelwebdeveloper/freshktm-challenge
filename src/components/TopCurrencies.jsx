@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/CryptoCurrencies.css'
-import axios from 'axios'
 import Card from './Common/Card/Card'
 import LoadingSkeleton from './Common/LoadingSkeleton/LoadingSkeleton'
 import { useNavigate } from 'react-router-dom'
+import { get } from '../services/http'
 
 const TopCurrencies = () => {
   const [cryptoCurrencies, setCryptoCurrencies] = useState([])
@@ -14,9 +14,7 @@ const TopCurrencies = () => {
   const getCryptoCurrencies = async () => {
     setLoading(true)
     try {
-      const {
-        data: { data },
-      } = await axios.get('https://api.coincap.io/v2/assets')
+      const { data } = await get('/assets')
       setCryptoCurrencies(data)
       setLoading(false)
     } catch (e) {

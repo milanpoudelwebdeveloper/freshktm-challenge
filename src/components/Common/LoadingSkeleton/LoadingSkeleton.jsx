@@ -6,10 +6,13 @@ import { useWindowSize } from '../../../hooks/useWindowSize'
 
 const LoadingSkeleton = () => {
   let width = 200
+
+  //typeOfDevice is used to determine the width of the current device/window
   const {
     typeOfDevice: { isDesktop, isMobile, isTablet },
   } = useWindowSize()
 
+  //we are setting the skeleton width depending on the device/window size
   if (isDesktop) {
     width = 210
   } else if (isTablet) {
@@ -18,6 +21,7 @@ const LoadingSkeleton = () => {
     width = 145
   }
 
+  //creating the skeleton of count 10 to cover the screen
   return (
     <div className="loadingSkeleton">
       {Array.from({ length: 10 }, (_, index) => (

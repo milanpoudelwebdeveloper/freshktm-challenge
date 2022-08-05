@@ -10,6 +10,7 @@ const BarChart = ({ cryptoDetails }) => {
   const { timeLine, prices } = getTimeAndPrice(cryptoDetails)
 
   const data = {
+    //using slice to just show 10 data points, here timeline respresents the date of the data point
     labels: timeLine.slice(0, 10),
     datasets: [
       {
