@@ -1,28 +1,24 @@
 .about {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    line-height: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about > img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .about > img {
+    height: 150px;
   }
-
-  .about> img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+  .about > p {
+    font-size: 12px;
   }
-
-
-  @media screen and (max-width: 768px) {
-    .about>img {
-      height: 150px;
-    }
-    .about>p {
-      font-size: 12px;
-    }
-    
-  }
-
- 
+}

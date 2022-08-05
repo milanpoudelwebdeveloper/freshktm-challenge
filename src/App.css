@@ -1,27 +1,31 @@
 .app {
-    display: flex;
-    overflow: hidden;
-    background-color:  #F0F2F5;
+  display: flex;
+  overflow: hidden;
+  background-color: #f0f2f5;
 }
 
 .navBar {
-    flex: 0.2;
-    background-color: rgb(0, 21, 41);;
+  flex: 0.2;
+  background-color: rgb(0, 21, 41);
 }
 
 .main {
-    flex: 0.8;
-    width: 100%;
-    padding: 1rem 2rem;
-
+  flex: 0.8;
+  width: 100%;
+  padding: 1rem 2rem;
 }
 
-@media screen and (max-width: 800px) {
-    .app {
-        flex-direction: column;
-    }
-    .main {
-        padding :1rem;
-    }
-    
+@media screen and (max-width: 480px) {
+  .app {
+    flex-direction: column;
+  }
+  .main {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 0.9rem;
+  }
 }

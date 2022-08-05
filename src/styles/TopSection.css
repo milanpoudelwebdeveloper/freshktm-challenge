@@ -1,9 +1,9 @@
 .topSection > h2 {
   font-size: 25px;
-  color: rgba(0,0,0,.85);
+  color: rgba(0, 0, 0, 0.85);
 }
 
-.topSection>p {
+.topSection > p {
   font-size: 18px;
   margin: 1rem 0;
 }
@@ -13,11 +13,10 @@
     padding: 0px 2px;
   }
 
-  .topSection>h2 {
+  .topSection > h2 {
     font-size: 16px;
   }
-  .topSection>p {
+  .topSection > p {
     font-size: 12px;
-    
   }
 }

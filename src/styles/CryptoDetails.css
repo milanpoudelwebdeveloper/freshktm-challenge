@@ -1,57 +1,54 @@
 .cryptoDetail {
-    display: flex;
-    flex-direction: column;
-    background-color: #F0F2F5;
-    padding-top: 1rem;
-    width: 100%;
-    gap: 19px;
-
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  padding-top: 1rem;
+  width: 100%;
+  gap: 19px;
 }
 
 .cryptoTitle {
-    border-bottom: 1px solid gray;
-    width: 100%;
-    text-align: center;  
-    color:#0071bd;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 1rem;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  text-align: center;
+  color: #0071bd;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1rem;
 }
 
-.cryptoTitle>p{
-    margin-bottom: 10px;
+.cryptoTitle > p {
+  margin-bottom: 10px;
 }
 
 .priceDetails {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.priceDetails>h2 {
-    color:#0071bd
+.priceDetails > h2 {
+  color: #0071bd;
 }
 
 .currentDetail {
-    display: flex;
-    gap:1rem;
+  display: flex;
+  gap: 1rem;
 }
 
-.cryptoDetail> p {
-    color: gray;
+.cryptoDetail > p {
+  color: gray;
 }
 
 @media screen and (max-width: 768px) {
-    .cryptoTitle>h1 {
-      font-size: 16px;
-    }
-    .priceDetails>h2 {
-        font-size: 14px;
-    }
-    .currentDetail {
-        font-size: 10px;
-    }
+  .cryptoTitle > h1 {
+    font-size: 16px;
+  }
+  .priceDetails > h2 {
+    font-size: 14px;
+  }
+  .currentDetail {
+    font-size: 10px;
+  }
 }
-    
