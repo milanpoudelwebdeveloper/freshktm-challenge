@@ -35,6 +35,7 @@
     "check-format": "prettier --check .",
     "prepare": "husky install"
   },
+  
   "browserslist": {
     "production": [
       ">0.2%",

@@ -3,6 +3,9 @@ import { Bar } from 'react-chartjs-2'
 import { backgroundColors, borderColors } from '../constants/barchartColors'
 import { getTimeAndPrice } from '../utils/getTimeAndPrice'
 
+//eslint-disable-next-line
+import Chart from 'chart.js/auto'
+
 const BarChart = ({ cryptoDetails }) => {
   const { timeLine, prices } = getTimeAndPrice(cryptoDetails)
 

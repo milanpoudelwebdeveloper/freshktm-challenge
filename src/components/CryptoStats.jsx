@@ -15,16 +15,16 @@ const CryptoStats = ({
 }) => {
   const mainStats = [
     {
-      'Price in USD': `$${millify(priceUsd)}`,
+      'Price in USD': `$${millify(priceUsd || 0)}`,
       Rank: rank,
-      '24h Volume': millify(volumeUsd24Hr),
+      '24h Volume': millify(volumeUsd24Hr || 0),
     },
   ]
   const otherStats = [
     {
-      'Market Cap': `$${millify(marketCapUsd)}`,
+      'Market Cap': `$${millify(marketCapUsd || 0)}`,
       Supply: millify(supply),
-      'Max Supply': millify(maxSupply),
+      'Max Supply': millify(maxSupply || 0),
     },
   ]
   return (
@@ -34,8 +34,8 @@ const CryptoStats = ({
         <p>Overview of {name} </p>
         {mainStats.map((stat) => (
           <>
-            {Object.entries(stat).map(([k, v]) => (
-              <p className="stats" key={k}>
+            {Object.entries(stat).map(([k, v], i) => (
+              <p className="stats" key={i}>
                 {k} : <b>{v}</b>
               </p>
             ))}
@@ -47,8 +47,8 @@ const CryptoStats = ({
         <p>Other important stats</p>
         {otherStats.map((stat) => (
           <>
-            {Object.entries(stat).map(([k, v]) => (
-              <p className="stats" key={k}>
+            {Object.entries(stat).map(([k, v], i) => (
+              <p className="stats" key={i}>
                 {k} : <b>{v}</b>
               </p>
             ))}

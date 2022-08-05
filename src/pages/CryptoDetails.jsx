@@ -56,8 +56,8 @@ const CryptoDetail = () => {
       <div className="priceDetails">
         <h2>{name} Price Chart</h2>
         <div className="currentDetail">
-          <h4>Change: {millify(changePercent24Hr)} %</h4>
-          <h4>Current Price: {millify(priceUsd)} </h4>
+          <h4>Change: {millify(changePercent24Hr || 0)} %</h4>
+          <h4>Current Price: {millify(priceUsd || 0)} </h4>
         </div>
       </div>
       <LineChart cryptoDetails={cryptoHistory && cryptoHistory} />
