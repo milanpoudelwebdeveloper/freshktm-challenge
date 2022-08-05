@@ -4,9 +4,12 @@ import { ImStatsDots } from 'react-icons/im'
 import NavBarMenus from './NavBarMenus'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useWindowSize } from '../hooks/useWindowSize'
+import { useNavigate } from 'react-router-dom'
 
 const SideNavBar = () => {
   const [activeMenu, setActiveMenu] = useState(false)
+
+  const navigate = useNavigate()
 
   const {
     typeOfDevice: { isMobile },
@@ -28,9 +31,9 @@ const SideNavBar = () => {
   return (
     <div className="navContainer">
       <div className="logoContainer">
-        <ImStatsDots size={20} />
-        <p>CryptoStats</p>
+        <ImStatsDots size={20} onClick={() => navigate('/')} />
 
+        <p>CryptoStats</p>
         <div className="hamburger">
           <GiHamburgerMenu
             //this opens and clicks the sideMenu according to the previous state
