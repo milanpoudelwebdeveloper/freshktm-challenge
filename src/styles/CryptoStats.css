@@ -1,7 +1,7 @@
 .cryptoStats {
   display: flex;
   justify-content: space-between;
-  padding: 3rem;
+  padding: 2.5rem;
 }
 
 .mainStats > h1,
@@ -22,7 +22,7 @@
   margin: 10px 0px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .cryptoStats {
     padding: 0.5rem;
   }
@@ -30,11 +30,8 @@
   .otherStats > h1 {
     font-size: 12px;
   }
-  .mainStats > p,
-  .otherStats > p {
-    font-size: 12px;
-  }
   .stats {
     padding: 10px 2px;
+    font-size: 12px;
   }
 }
