@@ -1,6 +1,6 @@
-import React from "react";
-import "../styles/CryptoStats.css";
-import millify from "millify";
+import React from 'react'
+import '../styles/CryptoStats.css'
+import millify from 'millify'
 
 const CryptoStats = ({
   cryptoDetails: {
@@ -15,18 +15,18 @@ const CryptoStats = ({
 }) => {
   const mainStats = [
     {
-      "Price in USD": `$${millify(priceUsd)}`,
+      'Price in USD': `$${millify(priceUsd)}`,
       Rank: rank,
-      "24h Volume": millify(volumeUsd24Hr),
+      '24h Volume': millify(volumeUsd24Hr),
     },
-  ];
+  ]
   const otherStats = [
     {
-      "Market Cap": `$${millify(marketCapUsd)}`,
+      'Market Cap': `$${millify(marketCapUsd)}`,
       Supply: millify(supply),
-      "Max Supply": millify(maxSupply),
+      'Max Supply': millify(maxSupply),
     },
-  ];
+  ]
   return (
     <div className="cryptoStats">
       <div className="mainStats">
@@ -35,7 +35,7 @@ const CryptoStats = ({
         {mainStats.map((stat) => (
           <>
             {Object.entries(stat).map(([k, v]) => (
-              <p className="stats">
+              <p className="stats" key={k}>
                 {k} : <b>{v}</b>
               </p>
             ))}
@@ -48,7 +48,7 @@ const CryptoStats = ({
         {otherStats.map((stat) => (
           <>
             {Object.entries(stat).map(([k, v]) => (
-              <p className="stats">
+              <p className="stats" key={k}>
                 {k} : <b>{v}</b>
               </p>
             ))}
@@ -56,7 +56,7 @@ const CryptoStats = ({
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CryptoStats;
+export default CryptoStats

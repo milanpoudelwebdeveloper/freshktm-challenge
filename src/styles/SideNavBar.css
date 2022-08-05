@@ -1,74 +1,67 @@
 .navContainer {
-    height: 100vh;
+  height: 100vh;
 }
 
-
-@media screen and (max-width:800px) {
-    .navContainer {
-        height: 8vh;
-    }
-    
+@media screen and (max-width: 800px) {
+  .navContainer {
+    height: 8vh;
+  }
 }
 
 .logoContainer {
-    color: white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    padding: 1rem;
-    position: relative;
-
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 1rem;
+  position: relative;
 }
 
 .hamburger {
-    position: absolute;
-    right: 14px;
-    display: none;
+  position: absolute;
+  right: 14px;
+  display: none;
 }
 
-
-.logoContainer>p {
-    font-size: 18px;
-    color: #1890FF
+.logoContainer > p {
+  font-size: 18px;
+  color: #1890ff;
 }
-
-
 
 .menuItem {
-    display: flex;
-    color: lightcyan;
-    font-size: 14px;
-    padding: 18px 10px;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  color: lightcyan;
+  font-size: 14px;
+  padding: 18px 10px;
+  align-items: center;
+  gap: 10px;
 }
 
 .menuItem-active {
-   background-color: #1890FF;
+  background-color: #1890ff;
 }
 
 @media screen and (max-width: 768px) {
-    .logoContainer {
-        position: fixed;
-        z-index: 100;
-        top: 0;
-        background-color: black;
-    }
+  .logoContainer {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    background-color: black;
+  }
 
-    .hamburger {
-        display: block;
-    }
+  .hamburger {
+    display: block;
+  }
 
-    .menuItems{
-        position: fixed;
-        top: 3rem;
-        width: 50%;
-        right: 5px;
-        background-color: black;
-        z-index: 100;
-
-    }
+  .menuItems {
+    position: fixed;
+    top: 3rem;
+    width: 50%;
+    right: 5px;
+    background-color: black;
+    z-index: 100;
+  }
 }

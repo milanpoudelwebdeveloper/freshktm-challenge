@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
-import "../styles/SideNavBar.css";
-import { ImStatsDots } from "react-icons/im";
-import NavBarMenus from "./NavBarMenus";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { useWindowSize } from "../hooks/useWindowSize";
+import React, { useEffect, useState } from 'react'
+import '../styles/SideNavBar.css'
+import { ImStatsDots } from 'react-icons/im'
+import NavBarMenus from './NavBarMenus'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { useWindowSize } from '../hooks/useWindowSize'
 
 const SideNavBar = () => {
-  const [activeMenu, setActiveMenu] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(false)
 
-  const { windowSize } = useWindowSize();
+  const { windowSize } = useWindowSize()
 
   useEffect(() => {
     if (windowSize <= 768) {
-      setActiveMenu(false);
+      setActiveMenu(false)
     } else {
-      setActiveMenu(true);
+      setActiveMenu(true)
     }
-  }, [windowSize]);
+  }, [windowSize])
 
   const closeSideMenu = () => {
-    setActiveMenu(false);
-  };
+    setActiveMenu(false)
+  }
 
   return (
     <div className="navContainer">
@@ -40,7 +40,7 @@ const SideNavBar = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default SideNavBar;
+export default SideNavBar

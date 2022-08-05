@@ -1,40 +1,40 @@
 .cryptoStats {
-    display: flex;
-    justify-content: space-between;
-    padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
 }
 
-
-
-.mainStats> h1, .otherStats>h1 {
-    color: #0071bd;
-    font-size: 20px;
+.mainStats > h1,
+.otherStats > h1 {
+  color: #0071bd;
+  font-size: 20px;
 }
 .stats {
-    padding: 15px 2px;
-    border-bottom: 1px solid gainsboro;
+  padding: 15px 2px;
+  border-bottom: 1px solid gainsboro;
 }
 .stats:hover {
-    background-color:  white;
-
+  background-color: white;
 }
 
-.mainStats>p,.otherStats>p {
-    margin: 10px 0px;
+.mainStats > p,
+.otherStats > p {
+  margin: 10px 0px;
 }
 
 @media screen and (max-width: 768px) {
-    .cryptoStats {
-        padding: 0.5rem;
-    }
-    .mainStats> h1, .otherStats>h1 {
-        font-size: 12px;
-    }
-    .mainStats> p, .otherStats>p {
-       font-size: 12px;
-    }
-    .stats {
-        padding: 10px 2px;
-    }
+  .cryptoStats {
+    padding: 0.5rem;
+  }
+  .mainStats > h1,
+  .otherStats > h1 {
+    font-size: 12px;
+  }
+  .mainStats > p,
+  .otherStats > p {
+    font-size: 12px;
+  }
+  .stats {
+    padding: 10px 2px;
+  }
 }
-    

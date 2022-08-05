@@ -1,9 +1,9 @@
-import React from "react";
-import Footer from "../components/Footer";
-import "../styles/About.css";
+import React from 'react'
+import Footer from '../components/Footer'
+import '../styles/About.css'
 const About = () => {
   return (
-    <div class="about">
+    <div className="about">
       <img src="https://images.unsplash.com/photo-1622020457014-aed1cc44f25e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" />
       <p>
         <b>CyptoStats</b> has been created to provide the statistics of
@@ -22,14 +22,14 @@ const About = () => {
         financial pro.
       </p>
       <p>
-        The four major types include <b>utility</b>, <b>payment</b>,{" "}
+        The four major types include <b>utility</b>, <b>payment</b>,{' '}
         <b>security</b>, and <b>stablecoins</b>. There also are DeFi tokens,
         NFTs, and asset-backed tokens. Of all cryptocurrencies, the most common
         are utility and payment tokens
       </p>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

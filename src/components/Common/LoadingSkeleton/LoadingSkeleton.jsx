@@ -1,7 +1,7 @@
-import React from "react";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
-import "./LoadingSkeleton.css";
+import React from 'react'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import './LoadingSkeleton.css'
 
 const LoadingSkeleton = () => {
   return (
@@ -12,7 +12,7 @@ const LoadingSkeleton = () => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default LoadingSkeleton;
+export default LoadingSkeleton

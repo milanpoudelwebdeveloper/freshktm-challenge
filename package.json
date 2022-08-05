@@ -8,7 +8,12 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "chart.js": "^3.9.0",
+    "eslint": "^8.21.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "millify": "^5.0.0",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^4.3.1",
     "react-dom": "^18.2.0",
@@ -23,13 +28,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint": "next lint",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -42,5 +46,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,md,html}": "eslint --cache --fix",
+    "*.{js,jsx,md,html,css,scss}": "prettier --write --ignore-unknown"
   }
 }

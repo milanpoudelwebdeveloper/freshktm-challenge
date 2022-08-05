@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/TopSection.css";
+import React from 'react'
+import '../styles/TopSection.css'
 
 const TopSection = () => {
   return (
@@ -9,7 +9,7 @@ const TopSection = () => {
         cryptocurrencies
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default TopSection;
+export default TopSection

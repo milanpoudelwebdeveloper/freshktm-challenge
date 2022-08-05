@@ -1,12 +1,12 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 
-import "./App.css";
-import HomePage from "./pages/HomePage";
-import About from "./pages/About";
-import CryptoCurrencies from "./pages/CryptoCurrencies";
-import CryptoDetail from "./pages/CryptoDetails";
-import SideNavBar from "./components/SideNavBar";
+import './App.css'
+import HomePage from './pages/HomePage'
+import About from './pages/About'
+import CryptoCurrencies from './pages/CryptoCurrencies'
+import CryptoDetail from './pages/CryptoDetails'
+import SideNavBar from './components/SideNavBar'
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         </Routes>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

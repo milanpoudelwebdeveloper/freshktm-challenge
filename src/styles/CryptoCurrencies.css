@@ -1,43 +1,42 @@
-.cryptoContainer>h2 {
-    font-size: 25px;
-    color: rgba(0,0,0,.85);
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+.cryptoContainer > h2 {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .titleContainer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cryptoItems {
-    display:flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 3%;
-    margin:1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 3%;
+  margin: 1.5rem 0;
 }
 
 .showBtn {
-    background-color: none;
-    outline: none;
-    border: none;
-    color: blue;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: none;
+  outline: none;
+  border: none;
+  color: blue;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
-    .cryptoContainer>h2 {
-        font-size: 16px;
-    }
-    .cryptoItems {
-        gap:4%;
-    }
-    .titleContainer>h2 {
-        font-size: 16px;
-    }
-    .showBtn {
-        font-size: 12px;
-    }
+  .cryptoContainer > h2 {
+    font-size: 16px;
+  }
+  .cryptoItems {
+    gap: 4%;
+  }
+  .titleContainer > h2 {
+    font-size: 16px;
+  }
+  .showBtn {
+    font-size: 12px;
+  }
 }
-
