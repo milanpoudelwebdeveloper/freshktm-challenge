@@ -6,6 +6,7 @@ import { getTimeAndPrice } from '../utils/getTimeAndPrice'
 import Chart from 'chart.js/auto'
 
 const LineChart = ({ cryptoDetails }) => {
+  //here getTimeAndPrice is the utils function that will return us array of all date/time and array of prices separately
   const { timeLine, prices } = getTimeAndPrice(cryptoDetails)
   const data = {
     labels: timeLine.slice(0, 20),

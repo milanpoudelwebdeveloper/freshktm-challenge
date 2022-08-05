@@ -3,6 +3,8 @@ import './Card.css'
 import millify from 'millify'
 import { useNavigate } from 'react-router-dom'
 
+//Reusable Card to show the overview of cryptocurrency used
+
 const Card = ({
   item: { name, rank, priceUsd, changePercent24Hr, marketCapUsd, symbol, id },
 }) => {

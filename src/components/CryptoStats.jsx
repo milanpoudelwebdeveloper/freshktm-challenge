@@ -13,6 +13,7 @@ const CryptoStats = ({
     volumeUsd24Hr,
   },
 }) => {
+  //created the array of objects from the api data, with this, it will be easy to map and apply styles for similar elements
   const mainStats = [
     {
       'Price in USD': `$${millify(Number(priceUsd))}`,
@@ -20,6 +21,7 @@ const CryptoStats = ({
       '24h Volume': millify(Number(volumeUsd24Hr)),
     },
   ]
+
   const otherStats = [
     {
       'Market Cap': `$${millify(Number(marketCapUsd))}`,
@@ -32,6 +34,7 @@ const CryptoStats = ({
       <div className="mainStats">
         <h1>{name} Value Statistics</h1>
         <p>Overview of {name} </p>
+
         {mainStats.map((stat, i) => (
           <div key={i}>
             {Object.entries(stat).map(([k, v], i) => (
