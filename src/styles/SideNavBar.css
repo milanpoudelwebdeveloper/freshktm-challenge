@@ -20,6 +20,10 @@
   position: relative;
 }
 
+.back {
+  display: none;
+}
+
 .hamburger {
   position: absolute;
   right: 14px;
@@ -50,6 +54,12 @@
     z-index: 100;
     top: 0;
     background-color: black;
+  }
+
+  .back {
+    display: block;
+    position: fixed;
+    left: 1rem;
   }
 
   .hamburger {

@@ -5,6 +5,7 @@ import NavBarMenus from './NavBarMenus'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useWindowSize } from '../hooks/useWindowSize'
 import { useNavigate } from 'react-router-dom'
+import { BiArrowBack } from 'react-icons/bi'
 
 const SideNavBar = () => {
   const [activeMenu, setActiveMenu] = useState(false)
@@ -31,6 +32,9 @@ const SideNavBar = () => {
   return (
     <div className="navContainer">
       <div className="logoContainer">
+        <div className="back">
+          <BiArrowBack color="white" onClick={() => navigate(-1)} size={18} />
+        </div>
         <ImStatsDots size={20} onClick={() => navigate('/')} />
 
         <p>CryptoStats</p>
