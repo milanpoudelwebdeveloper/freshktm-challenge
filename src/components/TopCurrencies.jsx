@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 const TopCurrencies = () => {
   const [cryptoCurrencies, setCryptoCurrencies] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   const navigate = useNavigate()
 

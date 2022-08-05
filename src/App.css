@@ -15,11 +15,17 @@
   padding: 1rem 2rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
   .app {
     flex-direction: column;
   }
   .main {
     padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 0.9rem;
   }
 }

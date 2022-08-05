@@ -8,15 +8,17 @@ import { useWindowSize } from '../hooks/useWindowSize'
 const SideNavBar = () => {
   const [activeMenu, setActiveMenu] = useState(false)
 
-  const { windowSize } = useWindowSize()
+  const {
+    typeOfDevice: { isMobile },
+  } = useWindowSize()
 
   useEffect(() => {
-    if (windowSize <= 768) {
+    if (isMobile) {
       setActiveMenu(false)
     } else {
       setActiveMenu(true)
     }
-  }, [windowSize])
+  }, [isMobile])
 
   const closeSideMenu = () => {
     setActiveMenu(false)
@@ -25,7 +27,7 @@ const SideNavBar = () => {
   return (
     <div className="navContainer">
       <div className="logoContainer">
-        <ImStatsDots size={25} />
+        <ImStatsDots size={20} />
         <p>CryptoStats</p>
 
         <div className="hamburger">

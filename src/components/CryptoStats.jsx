@@ -15,16 +15,16 @@ const CryptoStats = ({
 }) => {
   const mainStats = [
     {
-      'Price in USD': `$${millify(priceUsd || 0)}`,
+      'Price in USD': `$${millify(Number(priceUsd))}`,
       Rank: rank,
-      '24h Volume': millify(volumeUsd24Hr || 0),
+      '24h Volume': millify(Number(volumeUsd24Hr)),
     },
   ]
   const otherStats = [
     {
-      'Market Cap': `$${millify(marketCapUsd || 0)}`,
-      Supply: millify(supply),
-      'Max Supply': millify(maxSupply || 0),
+      'Market Cap': `$${millify(Number(marketCapUsd))}`,
+      Supply: millify(Number(supply)),
+      'Max Supply': millify(Number(maxSupply)),
     },
   ]
   return (
@@ -32,27 +32,27 @@ const CryptoStats = ({
       <div className="mainStats">
         <h1>{name} Value Statistics</h1>
         <p>Overview of {name} </p>
-        {mainStats.map((stat) => (
-          <>
+        {mainStats.map((stat, i) => (
+          <div key={i}>
             {Object.entries(stat).map(([k, v], i) => (
               <p className="stats" key={i}>
                 {k} : <b>{v}</b>
               </p>
             ))}
-          </>
+          </div>
         ))}
       </div>
       <div className="otherStats">
         <h1>Other important statistics</h1>
         <p>Other important stats</p>
-        {otherStats.map((stat) => (
-          <>
+        {otherStats.map((stat, i) => (
+          <div key={i}>
             {Object.entries(stat).map(([k, v], i) => (
               <p className="stats" key={i}>
                 {k} : <b>{v}</b>
               </p>
             ))}
-          </>
+          </div>
         ))}
       </div>
     </div>

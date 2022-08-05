@@ -17,9 +17,9 @@ const Card = ({
         <h4 style={{ color: 'red', fontSize: '12px' }}>{symbol}</h4>
       </div>
       <div className="cryptoDetails">
-        <p>Price: {millify(priceUsd || 0)}</p>
-        <p>Market Cap: {millify(marketCapUsd || 0)}</p>
-        <p>Daily Change: {millify(changePercent24Hr || 0)} %</p>
+        <p>Price: {millify(Number(priceUsd))}</p>
+        <p>Market Cap: {millify(Number(marketCapUsd))}</p>
+        <p>Daily Change: {millify(Number(changePercent24Hr))} %</p>
       </div>
     </div>
   )

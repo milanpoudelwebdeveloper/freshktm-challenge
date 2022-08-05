@@ -2,7 +2,7 @@
   height: 100vh;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
   .navContainer {
     height: 8vh;
   }
@@ -44,7 +44,7 @@
   background-color: #1890ff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .logoContainer {
     position: fixed;
     z-index: 100;

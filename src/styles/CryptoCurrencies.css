@@ -7,6 +7,7 @@
 .titleContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .cryptoItems {
@@ -24,6 +25,7 @@
   color: blue;
   font-size: 16px;
   cursor: pointer;
+  margin-right: 1.5rem;
 }
 
 @media screen and (max-width: 800px) {
