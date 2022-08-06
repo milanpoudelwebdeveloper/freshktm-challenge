@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 //this custom hook useWindowSize is used to get the width of the current device/window
 export const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState(undefined)
+  const [windowSize, setWindowSize] = useState<number>(0)
 
   const typeOfDevice = {
     isMobile: false,

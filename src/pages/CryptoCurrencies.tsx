@@ -7,7 +7,9 @@ import Footer from '../components/Footer'
 import { get } from '../services/http'
 
 const AllCryptoCurrencies = () => {
-  const [cryptoCurrencies, setCryptoCurrencies] = useState([])
+  const [cryptoCurrencies, setCryptoCurrencies] = useState<ICurrencyDetails[]>(
+    []
+  )
   const [searchKeyword, setSearchKeyword] = useState('')
   const [loading, setLoading] = useState(false)
 

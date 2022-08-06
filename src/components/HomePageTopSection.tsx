@@ -6,7 +6,7 @@ const TopSection = () => {
     <div className="topSection">
       <p>
         Here you can find the price value and different statistics of popular
-        cryptocurrencies
+        cryptocurrencies. Click on any card to see their details.
       </p>
     </div>
   )

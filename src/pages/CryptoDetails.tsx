@@ -9,11 +9,11 @@ import BarChart from '../components/BarChart'
 import { get } from '../services/http'
 
 const CryptoDetail = () => {
-  const [cryptoDetails, setCryptoDetails] = useState([])
+  const [cryptoDetails, setCryptoDetails] = useState<any>([])
   const [cryptoHistory, setCryptoHistory] = useState([])
 
   //extracting id from the url params, with this, we are sending the api request
-  let { id } = useParams()
+  const { id } = useParams()
 
   const getCryptoDetails = async () => {
     try {

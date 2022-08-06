@@ -2,7 +2,11 @@ import React from 'react'
 import '../styles/CryptoStats.css'
 import millify from 'millify'
 
-const CryptoStats = ({
+interface props {
+  cryptoDetails: ICurrencyDetails
+}
+
+const CryptoStats: React.FC<props> = ({
   cryptoDetails: {
     marketCapUsd,
     maxSupply,
