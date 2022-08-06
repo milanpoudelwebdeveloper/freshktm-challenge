@@ -5,7 +5,11 @@ import { getTimeAndPrice } from '../utils/getTimeAndPrice'
 //eslint-disable-next-line
 import Chart from 'chart.js/auto'
 
-const LineChart = ({ cryptoDetails }) => {
+interface props {
+  cryptoDetails: ICurrencyHistory[]
+}
+
+const LineChart: React.FC<props> = ({ cryptoDetails }) => {
   //here getTimeAndPrice is the utils function that will return us array of all date/time and array of prices separately
   const { timeLine, prices } = getTimeAndPrice(cryptoDetails)
   const data = {

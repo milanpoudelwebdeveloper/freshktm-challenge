@@ -6,7 +6,11 @@ import { getTimeAndPrice } from '../utils/getTimeAndPrice'
 //eslint-disable-next-line
 import Chart from 'chart.js/auto'
 
-const BarChart = ({ cryptoDetails }) => {
+interface props {
+  cryptoDetails: ICurrencyHistory[]
+}
+
+const BarChart: React.FC<props> = ({ cryptoDetails }) => {
   const { timeLine, prices } = getTimeAndPrice(cryptoDetails)
 
   const data = {

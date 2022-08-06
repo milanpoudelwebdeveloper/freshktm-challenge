@@ -1,6 +1,11 @@
 import React from 'react'
 
-const SearchContainer = ({ keyword, setKeyword }) => {
+interface props {
+  keyword: string
+  setKeyword: React.Dispatch<React.SetStateAction<string>>
+}
+
+const SearchContainer: React.FC<props> = ({ keyword, setKeyword }) => {
   return (
     <div
       style={{

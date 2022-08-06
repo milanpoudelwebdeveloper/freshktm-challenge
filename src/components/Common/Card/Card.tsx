@@ -5,7 +5,11 @@ import { useNavigate } from 'react-router-dom'
 
 //Reusable Card to show the overview of cryptocurrency used
 
-const Card = ({
+interface props {
+  item: ICurrencyDetails
+}
+
+const Card: React.FC<props> = ({
   item: { name, rank, priceUsd, changePercent24Hr, marketCapUsd, symbol, id },
 }) => {
   const navigate = useNavigate()
