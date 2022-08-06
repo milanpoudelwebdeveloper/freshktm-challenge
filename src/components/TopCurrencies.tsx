@@ -4,6 +4,7 @@ import Card from './Common/Card/Card'
 import LoadingSkeleton from './Common/LoadingSkeleton/LoadingSkeleton'
 import { useNavigate } from 'react-router-dom'
 import { get } from '../services/http'
+import { CRYPTO_CURRENCIES } from '../constants/routes'
 
 const TopCurrencies = () => {
   const [cryptoCurrencies, setCryptoCurrencies] = useState([])
@@ -31,10 +32,7 @@ const TopCurrencies = () => {
     <div className="cryptoContainer">
       <div className="titleContainer">
         <h2>Top 50 cryptocurrencies :</h2>
-        <button
-          className="showBtn"
-          onClick={() => navigate('/cryptocurrencies')}
-        >
+        <button className="showBtn" onClick={() => navigate(CRYPTO_CURRENCIES)}>
           Show more
         </button>
       </div>
