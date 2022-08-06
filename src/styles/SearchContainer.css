@@ -1,0 +1,14 @@
+.searchContainer {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 1rem;
+}
+
+.searchContainer > input {
+  background-color: white;
+  border: none;
+  padding: 12px;
+  outline: none;
+  color: gray;
+}

@@ -19,5 +19,5 @@
     "build",
     "scripts",
   ],
-  "include": ["**/*.ts", "**/*.tsx", "src/constants/sideNavbarItemsjs", "src/components/SideNavBar.jsx", "src/components/NavBarMenus.jsx"],
+  "include": ["**/*.ts", "**/*.tsx", "src/constants/sideNavbarItemsjs", "src/components/SideNavBar.tsx", "src/components/NavBarMenus.tsx"],
 }

@@ -2,8 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { sideNavBarItems } from '../constants/sideNavbarItems'
 import { useWindowSize } from '../hooks/useWindowSize'
+import { AiOutlineHome } from 'react-icons/ai'
+import { HiOutlineCurrencyDollar } from 'react-icons/hi'
+import { AiOutlineInfoCircle } from 'react-icons/ai'
 
-const NavBarMenus = ({ closeSideMenu }) => {
+interface props {
+  closeSideMenu: () => void
+}
+
+const NavBarMenus: React.FC<props> = ({ closeSideMenu }) => {
   const { pathname } = useLocation()
   const [activeMenu, setActiveMenu] = useState('')
 
@@ -15,9 +22,20 @@ const NavBarMenus = ({ closeSideMenu }) => {
     setActiveMenu(pathname)
   }, [pathname])
 
+  const icons = [
+    <AiOutlineHome key="home" />,
+    <HiOutlineCurrencyDollar key="currency" />,
+    <AiOutlineInfoCircle key="about" />,
+  ]
+
+  const sideNavBarItemsWithIcon = sideNavBarItems.map((item, index) => ({
+    ...item,
+    icon: icons[index],
+  }))
+
   return (
     <div className="menuItems">
-      {sideNavBarItems.map(({ id, title, href, icon }) => (
+      {sideNavBarItemsWithIcon.map(({ id, title, href, icon }) => (
         <Link to={href} key={id} style={{ textDecoration: 'none' }}>
           <div
             className={

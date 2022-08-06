@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { useWindowSize } from '../hooks/useWindowSize'
 import { useNavigate } from 'react-router-dom'
 import { BiArrowBack } from 'react-icons/bi'
+import { HOME } from '../constants/routes'
 
 const SideNavBar = () => {
   const [activeMenu, setActiveMenu] = useState(false)
@@ -35,7 +36,7 @@ const SideNavBar = () => {
         <div className="back">
           <BiArrowBack color="white" onClick={() => navigate(-1)} size={18} />
         </div>
-        <ImStatsDots size={20} onClick={() => navigate('/')} />
+        <ImStatsDots size={20} onClick={() => navigate(HOME)} />
 
         <p>CryptoStats</p>
         <div className="hamburger">
