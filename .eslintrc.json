@@ -7,7 +7,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "plugins": ["react", "import", "unused-imports"],
-  "ignorePatterns": ["interfaces/*"],
+  "ignorePatterns": ["interfaces/*", "**/*.html"],
   "rules": {
     "unused-imports/no-unused-imports": "error",
     "no-unused-vars": [
